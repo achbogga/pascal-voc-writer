@@ -16,11 +16,10 @@
         <pose>{{ object.pose }}</pose>
         <truncated>{{ object.truncated }}</truncated>
         <difficult>{{ object.difficult }}</difficult>
-        <bndbox>
-            <xmin>{{ object.xmin }}</xmin>
-            <ymin>{{ object.ymin }}</ymin>
-            <xmax>{{ object.xmax }}</xmax>
-            <ymax>{{ object.ymax }}</ymax>
+        <type>{{ object.name }}</type>
+        <vertices>
+            <x>{{ object.x }}</x>
+            <y>{{ object.y }}</y>
         </bndbox>
     </object>{% endfor %}
 </annotation>

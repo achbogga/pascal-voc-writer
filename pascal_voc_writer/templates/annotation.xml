@@ -20,6 +20,6 @@
         <vertices>
             <x>{{ object.x }}</x>
             <y>{{ object.y }}</y>
-        </bndbox>
+        </vertices>
     </object>{% endfor %}
 </annotation>

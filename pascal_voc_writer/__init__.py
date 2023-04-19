@@ -21,12 +21,16 @@ class Writer:
             'objects': []
         }
 
-    def addObject(self, name, x, y, pose='Unspecified', truncated=0, difficult=0):
+    def addObject(self, name, bbox, vertices = [], pose='Unspecified', truncated=0, difficult=0):
+        xmin, ymin, xmax, ymax = bbox
         self.template_parameters['objects'].append({
             'name': name,
-            'x': x,
-            'y': y,
+            'xmin': xmin,
+            'ymin': ymin,
+            'xmax': xmax,
+            'ymax': ymax,
             'pose': pose,
+            'vertices': vertices,
             'truncated': truncated,
             'difficult': difficult,
         })

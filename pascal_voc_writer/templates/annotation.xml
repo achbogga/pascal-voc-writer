@@ -17,9 +17,16 @@
         <truncated>{{ object.truncated }}</truncated>
         <difficult>{{ object.difficult }}</difficult>
         <type>{{ object.name }}</type>
+        <bndbox>
+            <xmin>{{ object.xmin }}</xmin>
+            <ymin>{{ object.ymin }}</ymin>
+            <xmax>{{ object.xmax }}</xmax>
+            <ymax>{{ object.ymax }}</ymax>
+        </bndbox>
+        {% for vertex in object.vertices %}
         <vertices>
-            <x>{{ object.x }}</x>
-            <y>{{ object.y }}</y>
-        </vertices>
+            <x>{{ vertex.x }}</x>
+            <y>{{ vertex.y }}</y>
+        </vertices>{% endfor %}
     </object>{% endfor %}
 </annotation>

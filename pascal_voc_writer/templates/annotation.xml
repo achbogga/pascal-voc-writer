@@ -16,7 +16,7 @@
         <pose>{{ object.pose }}</pose>
         <truncated>{{ object.truncated }}</truncated>
         <difficult>{{ object.difficult }}</difficult>
-        <type>{{ object.name }}</type>
+        <type>{{ object.type }}</type>
         <bndbox>
             <xmin>{{ object.xmin }}</xmin>
             <ymin>{{ object.ymin }}</ymin>
